@@ -639,8 +639,8 @@ namespace Protocols
                 }
                 #endregion
             }
-
-            globalObject.updateVariables(space, startTag, startTag + tagNum - 1);
+            //As Slave, if the received data address that is not his own, upgrade variables will go wrong 
+            //globalObject.updateVariables(space, startTag, startTag + tagNum - 1);
 
             response = new byte[0];  //wrong query - do not answer
             return response;
